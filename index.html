@@ -2,8 +2,46 @@
 <html>
 <head>
 	<title>mdg.com</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>Werkin' on it</h1>
+	<script type="text/javascript">
+		function toggle(onId, offId) {
+			document.getElementById(onId).style.display = 'block';
+			document.getElementById(offId).style.display = 'none';
+		}
+	</script>
+<main>
+	<pre id="cowsay">
+  ____________________________
+/ this site is currently under \
+\ developement                 /
+  ----------------------------
+         \   ^__^
+          \  (oo)\_______
+             (__)\       )\/\
+                 ||----w |
+                 ||     ||
+    </pre>
+	<div id="form-wrap">
+		<form action="https://formspree.io/matthewdarylgregory.com@gmail.com"
+		    method="POST">
+			<label>Name:</label>
+		  <input type="text" name="name">
+			<label>Reply address:</label>
+		  <input type="email" name="_replyto">
+			<input type="hidden" name="_subject" value="[matthewdarylgregory.com] new message">
+			<label>Message:</label>
+			<textarea name="message"></textarea>
+		  <input type="submit" value="Send">
+		</form>
+	</div>
+</main>
+<footer>
+	<a href="https://twitter.com/matthewdarylgr1">twitter</a>
+	<a href="https://github.com/Synj24">github</a>
+	<a onclick="toggle('form-wrap', 'cowsay'); return false;" href="#">contact me</a>
+</footer>
+
 </body>
 </html>
