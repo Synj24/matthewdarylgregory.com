@@ -9,9 +9,19 @@
 </head>
 <body>
 	<script type="text/javascript">
+		var toggled = false;
 		function toggle(onId, offId) {
-			document.getElementById(onId).style.display = 'block';
-			document.getElementById(offId).style.display = 'none';
+			if (!toggled) {
+				document.getElementById(onId).style.display = 'block';
+				document.getElementById(offId).style.display = 'none';
+				document.getElementById('toggler').innerHTML = "show me that cow again";
+				toggled = true;
+			} else {
+				document.getElementById(onId).style.display = 'none';
+				document.getElementById(offId).style.display = 'block';
+				document.getElementById('toggler').innerHTML = "contact me";
+				toggled = false;
+			}
 		}
 	</script>
 <main>
@@ -43,7 +53,7 @@
 <footer>
 	<a href="https://twitter.com/matthewdarylgr1">twitter</a>
 	<a href="https://github.com/Synj24">github</a>
-	<a onclick="toggle('form-wrap', 'cowsay'); return false;" href="#">contact me</a>
+	<a id="toggler" onclick="toggle('form-wrap', 'cowsay'); return false;" href="#">contact me</a>
 </footer>
 
 </body>
