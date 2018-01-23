@@ -21,7 +21,7 @@ footer {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(3, 200px);
-  height: 10vh;
+  height: 8vh;
 }
 
 a {
@@ -73,4 +73,17 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background: salmon;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+  main {
+    height: 50vh;
+  }
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 50px);
+  }
 }
