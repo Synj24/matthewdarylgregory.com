@@ -15,6 +15,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>mdg.com</title>
 	<link rel="stylesheet" href="style.css">
+	<script src="asciiMorph.js"></script>
 </head>
 <body>
 	<script type="text/javascript">
@@ -34,17 +35,7 @@
 		}
 	</script>
 <main>
-	<pre id="cowsay">
-  ____________________________
-/ this site is currently under \
-\ developement                 /
-  ----------------------------
-         \   ^__^
-          \  (oo)\_______
-             (__)\       )\/\
-                 ||----w |
-                 ||     ||
-    </pre>
+	<pre class="ascii-element" id="cowsay"></pre>
 	<div id="form-wrap">
 		<form action="https://formspree.io/matthewdarylgregory.com@gmail.com"
 		    method="POST">
@@ -65,6 +56,52 @@
 	<a href="https://github.com/Synj24">github</a>
 	<a id="toggler" onclick="toggle('form-wrap', 'cowsay'); return false;" href="#">contact me</a>
 </footer>
+<script type="text/javascript">
+	// Initialize AsciiMorph
+	var element = document.querySelector('pre');
+	AsciiMorph(element, {x: 50,y: 25});
 
+	// First, define some ascii art.
+
+		var cowsay = [
+	"              ____________________________",
+	"		/ this site is currently under \\",
+	"		\\ developement                 /",
+	"		  ----------------------------",
+	"		         \\   ^__^",
+	"		          \\  (oo)\\_______",
+	"		             (__)\\       )\\/\\",
+	"		                 ||----w |",
+	"		                 ||     ||",
+		]
+	 var frog = [
+		 "  @..@  ",
+		 " (\\--/) ",
+		 "(.>__<.)",
+		 "^^^  ^^^",
+	 ]
+	var cat = [
+		"         /\\_/\\",
+ 		"    ____/ o o \\",
+		"  /~____  =ø= /",
+ 		" (______)__m_m)",
+	]
+
+	// Then, you can render (will render instantly)
+	//
+	AsciiMorph.render(cowsay);
+
+	setTimeout(function() {
+		AsciiMorph.morph(frog);
+	}, 3000);
+
+	setTimeout(function() {
+		AsciiMorph.morph(cat);
+	}, 6000);
+
+	// Then morph, to a new creation
+	// AsciiMorph.morph(checkerboard);
+
+</script>
 </body>
 </html>
