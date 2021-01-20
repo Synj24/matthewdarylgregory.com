@@ -15,6 +15,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>mdg.com</title>
 	<link rel="stylesheet" href="style.css">
+	<script src="asciiMorph.js"></script>
 </head>
 <body>
 	<script type="text/javascript">
@@ -34,17 +35,7 @@
 		}
 	</script>
 <main>
-	<pre id="cowsay">
-  ____________________________
-/ this site is currently under \
-\ development                  /
-  ----------------------------
-         \   ^__^
-          \  (oo)\_______
-             (__)\       )\/\
-                 ||----w |
-                 ||     ||
-    </pre>
+	<pre class="ascii-element" id="cowsay" aria-hidden="true"></pre>
 	<div id="form-wrap">
 		<form action="https://formspree.io/matthewdarylgregory.com@gmail.com"
 		    method="POST">
@@ -61,10 +52,77 @@
 	</div>
 </main>
 <footer>
-	<a href="https://twitter.com/matthewdarylgr1">twitter</a>
-	<a href="https://github.com/Synj24">github</a>
-	<a id="toggler" onclick="toggle('form-wrap', 'cowsay'); return false;" href="#">contact me</a>
+	<a onmouseover="AsciiMorph.morph(birds)" onmouseout="AsciiMorph.morph(cowsay)" href="https://twitter.com/matthewdarylgr1">twitter</a>
+	<a onmouseover="AsciiMorph.morph(computer)" onmouseout="AsciiMorph.morph(cowsay)" href="https://github.com/Synj24">github</a>
+	<a onmouseover="AsciiMorph.morph(envolope)" onmouseout="AsciiMorph.morph(cowsay)" id="toggler" onclick="toggle('form-wrap', 'cowsay'); return false;" href="#">contact me</a>
 </footer>
+<script type="text/javascript">
+	var element = document.querySelector('pre');
+	AsciiMorph(element, {x: 50,y: 25});
 
+	var mod = [
+	"   __   __ _______ _______ _______ __   __ _______ _     _   ",
+	"  |  |_|  |   _   |       |       |  | |  |       | | _ | |  ",
+	"  |       |  |_|  |_     _|_     _|  |_|  |    ___| || || |  ",
+	"  |       |       | |   |   |   | |       |   |___|       |  ",
+	"  |       |       | |   |   |   | |       |    ___|       |  ",
+	"  | ||_|| |   _   | |   |   |   | |   _   |   |___|   _   |  ",
+	"  |_|   |_|__| |__| |___|   |___| |__| |__|_______|__| |__|  ",
+	"   ______  _______ ______   __   __ ___                      ",
+	"  |      ||   _   |    _ | |  | |  |   |                     ",
+	"  |  _    |  |_|  |   | || |  |_|  |   |                     ",
+	"  | | |   |       |   |_||_|       |   |                     ",
+	"  | |_|   |       |    __  |_     _|   |___                  ",
+	"  |       |   _   |   |  | | |   | |       |                 ",
+	"  |______||__| |__|___|  |_| |___| |_______|                 ",
+	"   _______ ______   _______ _______ _______ ______   __   __ ",
+	"  |       |    _ | |       |       |       |    _ | |  | |  |",
+	"  |    ___|   | || |    ___|    ___|   _   |   | || |  |_|  |",
+	"  |   | __|   |_||_|   |___|   | __|  | |  |   |_||_|       |",
+	"  |   ||  |    __  |    ___|   ||  |  |_|  |    __  |_     _|",
+	"  |   |_| |   |  | |   |___|   |_| |       |   |  | | |   |  ",
+	"  |_______|___|  |_|_______|_______|_______|___|  |_| |___|  "
+
+	]
+	var cowsay = [
+	"              ____________________________",
+	"		/ this site is currently under \\",
+	"		\\ developement                 /",
+	"		  ----------------------------",
+	"		         \\   ^__^",
+	"		          \\  (oo)\\_______",
+	"		             (__)\\       )\\/\\",
+	"		                 ||----w |",
+	"		                 ||     ||",
+		]
+	 var birds = [
+		"   ___     ___     ___     ___",
+		"  (o o)   (^ ^)   (o o)   (o o)",
+		" (  V  ) (  V  ) (  V  ) (  V  ) ",
+		"/--m-m- /--m-m- /--m-m- /--m-m-"
+	 ]
+	var computer = [
+		"  ____   "  ,
+		" ||\"\"|| - Hello World! :^)",
+		" ||__||",
+		" [ -=.]`)",
+		" ====== 0"
+	]
+	var envolope = [
+	"     __________________",
+    "    |\\                /|",
+    "    | \\              / |",
+    "    | /\\____________/\\ |",
+    "    |/                \\|",
+    "    |__________________|"
+	]
+
+	AsciiMorph.render(mod);
+
+	setTimeout(function() {
+		AsciiMorph.morph(cowsay);
+	}, 2000);
+
+</script>
 </body>
 </html>
