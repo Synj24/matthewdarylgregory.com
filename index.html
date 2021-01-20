@@ -35,7 +35,7 @@
 		}
 	</script>
 <main>
-	<pre class="ascii-element" id="cowsay"></pre>
+	<pre class="ascii-element" id="cowsay" aria-hidden="true"></pre>
 	<div id="form-wrap">
 		<form action="https://formspree.io/matthewdarylgregory.com@gmail.com"
 		    method="POST">
@@ -52,18 +52,39 @@
 	</div>
 </main>
 <footer>
-	<a href="https://twitter.com/matthewdarylgr1">twitter</a>
-	<a href="https://github.com/Synj24">github</a>
-	<a id="toggler" onclick="toggle('form-wrap', 'cowsay'); return false;" href="#">contact me</a>
+	<a onmouseover="AsciiMorph.morph(birds)" onmouseout="AsciiMorph.morph(cowsay)" href="https://twitter.com/matthewdarylgr1">twitter</a>
+	<a onmouseover="AsciiMorph.morph(computer)" onmouseout="AsciiMorph.morph(cowsay)" href="https://github.com/Synj24">github</a>
+	<a onmouseover="AsciiMorph.morph(envolope)" onmouseout="AsciiMorph.morph(cowsay)" id="toggler" onclick="toggle('form-wrap', 'cowsay'); return false;" href="#">contact me</a>
 </footer>
 <script type="text/javascript">
-	// Initialize AsciiMorph
 	var element = document.querySelector('pre');
 	AsciiMorph(element, {x: 50,y: 25});
 
-	// First, define some ascii art.
+	var mod = [
+	"   __   __ _______ _______ _______ __   __ _______ _     _   ",
+	"  |  |_|  |   _   |       |       |  | |  |       | | _ | |  ",
+	"  |       |  |_|  |_     _|_     _|  |_|  |    ___| || || |  ",
+	"  |       |       | |   |   |   | |       |   |___|       |  ",
+	"  |       |       | |   |   |   | |       |    ___|       |  ",
+	"  | ||_|| |   _   | |   |   |   | |   _   |   |___|   _   |  ",
+	"  |_|   |_|__| |__| |___|   |___| |__| |__|_______|__| |__|  ",
+	"   ______  _______ ______   __   __ ___                      ",
+	"  |      ||   _   |    _ | |  | |  |   |                     ",
+	"  |  _    |  |_|  |   | || |  |_|  |   |                     ",
+	"  | | |   |       |   |_||_|       |   |                     ",
+	"  | |_|   |       |    __  |_     _|   |___                  ",
+	"  |       |   _   |   |  | | |   | |       |                 ",
+	"  |______||__| |__|___|  |_| |___| |_______|                 ",
+	"   _______ ______   _______ _______ _______ ______   __   __ ",
+	"  |       |    _ | |       |       |       |    _ | |  | |  |",
+	"  |    ___|   | || |    ___|    ___|   _   |   | || |  |_|  |",
+	"  |   | __|   |_||_|   |___|   | __|  | |  |   |_||_|       |",
+	"  |   ||  |    __  |    ___|   ||  |  |_|  |    __  |_     _|",
+	"  |   |_| |   |  | |   |___|   |_| |       |   |  | | |   |  ",
+	"  |_______|___|  |_|_______|_______|_______|___|  |_| |___|  "
 
-		var cowsay = [
+	]
+	var cowsay = [
 	"              ____________________________",
 	"		/ this site is currently under \\",
 	"		\\ developement                 /",
@@ -74,33 +95,33 @@
 	"		                 ||----w |",
 	"		                 ||     ||",
 		]
-	 var frog = [
-		 "  @..@  ",
-		 " (\\--/) ",
-		 "(.>__<.)",
-		 "^^^  ^^^",
+	 var birds = [
+		"   ___     ___     ___     ___",
+		"  (o o)   (^ ^)   (o o)   (o o)",
+		" (  V  ) (  V  ) (  V  ) (  V  ) ",
+		"/--m-m- /--m-m- /--m-m- /--m-m-"
 	 ]
-	var cat = [
-		"         /\\_/\\",
- 		"    ____/ o o \\",
-		"  /~____  =ø= /",
- 		" (______)__m_m)",
+	var computer = [
+		"  ____   "  ,
+		" ||\"\"|| - Hello World! :^)",
+		" ||__||",
+		" [ -=.]`)",
+		" ====== 0"
+	]
+	var envolope = [
+	"     __________________",
+    "    |\\                /|",
+    "    | \\              / |",
+    "    | /\\____________/\\ |",
+    "    |/                \\|",
+    "    |__________________|"
 	]
 
-	// Then, you can render (will render instantly)
-	//
-	AsciiMorph.render(cowsay);
+	AsciiMorph.render(mod);
 
 	setTimeout(function() {
-		AsciiMorph.morph(frog);
-	}, 3000);
-
-	setTimeout(function() {
-		AsciiMorph.morph(cat);
-	}, 6000);
-
-	// Then morph, to a new creation
-	// AsciiMorph.morph(checkerboard);
+		AsciiMorph.morph(cowsay);
+	}, 2000);
 
 </script>
 </body>
