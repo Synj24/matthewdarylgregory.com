@@ -52,6 +52,8 @@
 	</div>
 </main>
 <footer>
+	<a onmouseover="AsciiMorph.morph(joystick)" onmouseout="AsciiMorph.morph(cowsay)" href="https://everythink.itch.io/">games</a>
+	<a onmouseover="AsciiMorph.morph(easel)" onmouseout="AsciiMorph.morph(cowsay)" href="https://cargocollective.com/matthewgregory">art</a>
 	<a onmouseover="AsciiMorph.morph(birds)" onmouseout="AsciiMorph.morph(cowsay)" href="https://twitter.com/matthewdarylgr1">twitter</a>
 	<a onmouseover="AsciiMorph.morph(computer)" onmouseout="AsciiMorph.morph(cowsay)" href="https://github.com/Synj24">github</a>
 	<a onmouseover="AsciiMorph.morph(envolope)" onmouseout="AsciiMorph.morph(cowsay)" id="toggler" onclick="toggle('form-wrap', 'cowsay'); return false;" href="#">contact me</a>
@@ -85,16 +87,15 @@
 
 	]
 	var cowsay = [
-	"              ____________________________",
-	"		/ this site is currently under \\",
-	"		\\ developement                 /",
-	"		  ----------------------------",
-	"		         \\   ^__^",
-	"		          \\  (oo)\\_______",
-	"		             (__)\\       )\\/\\",
-	"		                 ||----w |",
-	"		                 ||     ||",
-		]
+	" _____________________________",
+	"< Hello,  Welcome to my website >",
+  	" -----------------------------",
+    "     \\   ^__^ ",
+    "      \\  (oo)\\_______",
+    "         (__)\\       )\\/\\\\",
+    "             ||----w |",
+    "             ||     ||",
+]
 	 var birds = [
 		"   ___     ___     ___     ___",
 		"  (o o)   (^ ^)   (o o)   (o o)",
@@ -115,6 +116,34 @@
     "    | /\\____________/\\ |",
     "    |/                \\|",
     "    |__________________|"
+	]
+	var joystick = [
+    "        __",
+    "       (  )",
+    "        ||",
+    "        ||",
+    "    ___|\"\"|__.._",
+    "   /____________\\",
+    "   \\____________/~~~.",
+	]
+	var easel = [
+    "        _",
+    "       H||",
+    "       H||",
+	"  _____H||_____",
+	" [|............|",
+	" [|............|",
+	" [|............|",
+	" [|............|",
+	" [|............|",
+	" [|............|",
+	" [|____________|",
+    "   H||_______H||",
+    "   H||________\\|",
+    "   H||       H||",
+    "   H||       H||",
+    "  _H||_______H||__",
+    "H|________________|",
 	]
 
 	AsciiMorph.render(mod);
