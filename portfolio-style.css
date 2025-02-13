@@ -21,7 +21,7 @@
     background-color: #232323;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(5, 200px);
+    grid-template-columns: repeat(4, 200px);
     height: 8vh;
     position: fixed;
     left: 0;
@@ -91,7 +91,7 @@
     }
   }
   
-  .web_design, .graphic_design, #form-wrap {
+  #form-wrap {
     display: none;
   }
   
