@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+    scrollbar-color: darkseagreen #232323;
+  }
+  
+  body {
+    background: #232323;
+    color: darkseagreen;
+    padding: 20px;
+  }
+  
+  main {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+  }
+  
+  footer {
+    background-color: #232323;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, 200px);
+    height: 8vh;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  a {
+    align-self: center;
+    justify-self: center;
+    color: darkseagreen;
+  }
+  
+  a:hover {
+    color: salmon;
+  }
+  
+  form {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 150px 1fr;
+  }
+  
+  input {
+    background: none;
+    color: grey;
+    border: none;
+  }
+  
+  label {
+    justify-self: end;
+  }
+  
+  input,
+  label {
+    font-family: monospace;
+  }
+  
+  textarea {
+    background: none;
+    color: grey;
+    border-color: darkseagreen;
+  }
+  
+  input[type="submit"] {
+    background: darkseagreen;
+    color: #232323;
+    grid-column: 2 / -1;
+    margin: 10px;
+  }
+  
+  input[type="submit"]:hover {
+    background: salmon;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      font-size: 15px;
+    }
+    main {
+      height: 50vh;
+    }
+    footer {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 50px);
+      position: absolute;
+    }
+  }
+  
+  .web_design, .graphic_design, #form-wrap {
+    display: none;
+  }
+  
+  #gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 15vw auto;
+  }
+  
+div.grid-container {
+    overflow-y: auto;
+    height: 92vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+
+  div.grid-container img {
+    padding: 10px;
+    max-width: 400px;
+  }
+  
+  .filter {
+    position: fixed;
+  }
+
+  .overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 80vw; /* Full width (cover the whole page) */
+    height: 80vh%; /* Full height (cover the whole page) */
+    margin: 10vh 10vw; /* Center the box */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }

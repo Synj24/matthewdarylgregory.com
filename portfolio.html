@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111476147-3"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-111476147-3');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>mdg.com</title>
+	<link rel="stylesheet" href="portfolio-style.css">
+</head>
+<body>
+	<script type="text/javascript">
+        // toggle categorys
+        function ToggleCategory(checkbox, category) {
+            var elements = document.getElementsByClassName(category);
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.display = checkbox.checked ? 'inline' : 'none';
+            }
+        }
+
+        window.onload = function() {
+            document.getElementById('game_dev').checked = true;
+            document.getElementById('web_design').checked = false;
+            document.getElementById('graphic_design').checked = false;
+        }
+        // toggle contact
+		var toggled = false;
+		function toggle(onId, offId) {
+			if (!toggled) {
+				document.getElementById(onId).style.display = 'block';
+				document.getElementById(offId).style.display = 'none';
+				document.getElementById('toggler').innerHTML = "Show Portfolio";
+				toggled = true;
+			} else {
+				document.getElementById(onId).style.display = 'none';
+				document.getElementById(offId).style.display = 'grid';
+				document.getElementById('toggler').innerHTML = "contact me";
+				toggled = false;
+			}
+		}
+	</script>
+<main>
+    <div id="gallery">
+        <div class = "filter-container">
+            <div class = "filter">
+                <h3>Filter Results:</h3>
+                <div>
+                    <input type="checkbox" onclick="ToggleCategory(this, 'game_dev')" id="game_dev" name="Game Development" checked />
+                    <label for="game_dev">Game Development</label>
+                </div>
+                <div>
+                    <input type="checkbox" onclick="ToggleCategory(this, 'web_design')" id="web_design" name="Web Design / Development" />
+                    <label for="web_design">Web Design / Development</label>
+                </div>
+                <div>
+                    <input type="checkbox" onclick="ToggleCategory(this, 'graphic_design')" id="graphic_design" name="Graphic Design" />
+                    <label for="graphic_design">Graphic Design</label>
+                </div>
+            </div>
+        </div>
+        <div class="grid-container">
+            <!-- Game Dev-->
+            <img class = "game_dev" src="images/game_dev/basic-autotile-export.png" alt="autotileing blob tileset">
+            <img class = "game_dev" src="images/game_dev/Character-export.png" alt="coin quest character sprite">
+            <img class = "game_dev" src="images/game_dev/dungeon4-export.png" alt="knight sprite">
+            <img class = "game_dev" src="images/game_dev/FlyBoss.gif" alt="fly boss sprite">
+            <img class = "game_dev" src="images/game_dev/Flying-Car.png" alt="flying car sprite">
+            <img class = "game_dev" src="images/game_dev/LTC-Lander.png" alt="lander sprite">
+            <img class = "game_dev" src="images/game_dev/moon-trader-map-computer.png" alt="moon trader map">
+            <img class = "game_dev" src="images/game_dev/moon-trader-tileset-Recovered.png" alt="moon trader tileset">
+            <img class = "game_dev" src="images/game_dev/nautical-chart.png" alt="nautical chart">
+            <img class = "game_dev" src="images/game_dev/sloop_1.png" alt="model of a sailing yacht">
+            <img class = "game_dev" src="images/game_dev/sloop_2.png" alt="model of a sailing yacht">
+            <img class = "game_dev" src="images/game_dev/R1.png" alt="r1 sprite">
+            <img class = "game_dev" src="images/game_dev/snail-export.png" alt="snail sprite">
+            <img class = "game_dev" src="images/game_dev/StoneBlocks.png" alt="stone blocks tileset">
+            <img class = "game_dev" src="images/game_dev/tileset copy-export.png" alt="tileset for...">
+            <img class = "game_dev" src="images/game_dev/tileset-export.png" alt="tileset for...">
+            <img class = "game_dev" src="images/game_dev/VictoryScreen.png" alt="victory screen for coin quest">
+            <img class = "game_dev" src="images/game_dev/walking-export.gif" alt="walking cycle">
+            <!-- Web Design / Dev-->
+            <img class = "web_design" src="images/web_design/20160714-social-media-centre.jpg" alt="web design 1">
+            <img class = "web_design" src="images/web_design/20160715-eoc12-banner.jpg" alt="web design 2">
+            <img class = "web_design" src="images/web_design/Access-AA-iPhone - Latest News(listings).png" alt="web design 3">
+            <img class = "web_design" src="images/web_design/Access-all-areas btm.png" alt="web design 4">
+            <img class = "web_design" src="images/web_design/Access-all-areas.png" alt="web design 5">
+            <img class = "web_design" src="images/web_design/almighty loaf-1.png" alt="web design 6">
+            <img class = "web_design" src="images/web_design/almighty loaf-2.png" alt="web design 7">
+            <img class = "web_design" src="images/web_design/copper-catalogue-eflyer.jpg" alt="web design 9">
+            <img class = "web_design" src="images/web_design/Dafnia-draft.jpg" alt="web design 10">
+            <img class = "web_design" src="images/web_design/draft-1.jpg" alt="web design 11">
+            <img class = "web_design" src="images/web_design/draft-2.jpg" alt="web design 12">
+            <img class = "web_design" src="images/web_design/EN-Indy-holding-1.png" alt="web design 13">
+            <img class = "web_design" src="images/web_design/george-website.png" alt="web design 14">
+            <img class = "web_design" src="images/web_design/Intelligent Patch Panels-01.png" alt="web design 15">
+            <img class = "web_design" src="images/web_design/Intelligent Patch Panels-02.png" alt="web design 16">
+            <img class = "web_design" src="images/web_design/ip68enclosures-eflyer.png" alt="web design 17">
+            <img class = "web_design" src="images/web_design/Mash Rich Media Portfolio - Mash Agency-1.png" alt="web design 18">
+            <img class = "web_design" src="images/web_design/Mash Rich Media Portfolio - Mash Agency-2.png" alt="web design 19">
+            <img class = "web_design" src="images/web_design/Mash Rich Media Portfolio - Mash Agency-3.png" alt="web design 20">
+            <img class = "web_design" src="images/web_design/Mash Rich Media Portfolio - Mash Agency-4.png" alt="web design 21">
+            <img class = "web_design" src="images/web_design/mg-wireframe-v5-04.png" alt="web design 25">
+            <img class = "web_design" src="images/web_design/mg-wireframe-v5-05.png" alt="web design 26">
+            <img class = "web_design" src="images/web_design/prp-banner.jpg" alt="web design 29">
+            <img class = "web_design" src="images/web_design/Screenshot 2020-11-13 at 00.16.01.png" alt="web design 30">
+            <img class = "web_design" src="images/web_design/Screenshot 2020-11-13 at 00.16.12.png" alt="web design 31">
+            <img class = "web_design" src="images/web_design/Screenshot 2020-11-13 at 00.16.39.png" alt="web design 32">
+            <img class = "web_design" src="images/web_design/todo-list-1.png" alt="web design 33">
+            <img class = "web_design" src="images/web_design/Visual hierarchy - KOSS-1.png" alt="web design 34">
+            <img class = "web_design" src="images/web_design/Visual hierarchy - KOSS-2.png" alt="web design 35">
+            <img class = "web_design" src="images/web_design/Visual hierarchy - KOSS-4.png" alt="web design 37">
+            <!-- Graphic Design -->
+            <img class = "graphic_design" src="images/graphic_design/3210.png" alt="graphic design 1">
+            <img class = "graphic_design" src="images/graphic_design/3d boxes.png" alt="graphic design 2">
+            <img class = "graphic_design" src="images/graphic_design/ashhand.jpg" alt="graphic design 3">
+            <img class = "graphic_design" src="images/graphic_design/ashmarbe.png" alt="graphic design 4">
+            <img class = "graphic_design" src="images/graphic_design/CONECTA-01.png" alt="graphic design 5">
+            <img class = "graphic_design" src="images/graphic_design/CONECTA-2-01.png" alt="graphic design 6">
+            <img class = "graphic_design" src="images/graphic_design/CONECTAUK-01.png" alt="graphic design 7">
+            <img class = "graphic_design" src="images/graphic_design/CONECTAUK-03.png" alt="graphic design 9">
+            <img class = "graphic_design" src="images/graphic_design/CONECTAUK-04.png" alt="graphic design 10">
+            <img class = "graphic_design" src="images/graphic_design/CONECTAUK-05.png" alt="graphic design 11">
+            <img class = "graphic_design" src="images/graphic_design/CornerDesk.jpg" alt="graphic design 12">
+            <img class = "graphic_design" src="images/graphic_design/design-4.png" alt="graphic design 13">
+            <img class = "graphic_design" src="images/graphic_design/Desk.jpg" alt="graphic design 14">
+            <img class = "graphic_design" src="images/graphic_design/enclosure illustration.png" alt="graphic design 15">
+            <img class = "graphic_design" src="images/graphic_design/enclosure underwater.png" alt="graphic design 16">
+            <img class = "graphic_design" src="images/graphic_design/enclosure-cross-section-2.png" alt="graphic design 17">
+            <img class = "graphic_design" src="images/graphic_design/facebook-ad-v1.jpg" alt="graphic design 18">
+            <img class = "graphic_design" src="images/graphic_design/IPP-1.png" alt="graphic design 20">
+            <img class = "graphic_design" src="images/graphic_design/IPP-4.png" alt="graphic design 21">
+            <img class = "graphic_design" src="images/graphic_design/LGX-eflyergraphic-01.png" alt="graphic design 22">
+            <img class = "graphic_design" src="images/graphic_design/LGX-eflyergraphic-02.png" alt="graphic design 23">
+            <img class = "graphic_design" src="images/graphic_design/LGXlogo-01.png" alt="graphic design 24">
+            <img class = "graphic_design" src="images/graphic_design/Logo.png" alt="graphic design 25">
+            <img class = "graphic_design" src="images/graphic_design/looking through the glass.jpg" alt="graphic design 26">
+            <img class = "graphic_design" src="images/graphic_design/lxmotdr-01.png" alt="graphic design 28">
+            <img class = "graphic_design" src="images/graphic_design/m-logo-small-v2.png" alt="graphic design 30">
+            <img class = "graphic_design" src="images/graphic_design/Matthew Gregory.jpg" alt="graphic design 31">
+            <img class = "graphic_design" src="images/graphic_design/mg logo-01.png" alt="graphic design 32">
+            <img class = "graphic_design" src="images/graphic_design/mystic east.jpg" alt="graphic design 33">
+            <img class = "graphic_design" src="images/graphic_design/Polyomino-01.png" alt="graphic design 34">
+            <img class = "graphic_design" src="images/graphic_design/publicationfinal.jpg" alt="graphic design 35">
+            <img class = "graphic_design" src="images/graphic_design/screenprint1.png" alt="graphic design 36">
+            <img class = "graphic_design" src="images/graphic_design/TC-2.jpg" alt="graphic design 38">
+            <img class = "graphic_design" src="images/graphic_design/TC-3.jpg" alt="graphic design 39">
+            <img class = "graphic_design" src="images/graphic_design/TC-5.jpg" alt="graphic design 41">
+            <img class = "graphic_design" src="images/graphic_design/TC-6.jpg" alt="graphic design 42">
+            <img class = "graphic_design" src="images/graphic_design/TC.png" alt="graphic design 44">
+            <img class = "graphic_design" src="images/graphic_design/Trend Corp logos-01.png" alt="graphic design 45">
+            <img class = "graphic_design" src="images/graphic_design/Trend Corp.png" alt="graphic design 46">
+        </div>
+    </div>
+	<div id="form-wrap" class="overlay">
+		<form action="https://formspree.io/matthewdarylgregory.com@gmail.com"
+		    method="POST">
+			<label>Name:</label>
+		  <input type="text" name="name">
+			<label>Reply address:</label>
+		  <input type="email" name="_replyto">
+			<input type="hidden" name="_subject" value="[matthewdarylgregory.com] new message">
+			<input type="hidden" name="_next" value="//matthewdarylgregory.com/thanks.html" />
+			<label>Message:</label>
+			<textarea name="message"></textarea>
+		  <input type="submit" value="Send">
+		</form>
+	</div>
+</main>
+<footer>
+	<a href="https://everythink.itch.io/">games</a>
+	<a href="index.html">back</a>
+	<a href="https://twitter.com/matthewdarylgr1">twitter</a>
+	<a href="https://github.com/Synj24">github</a>
+	<a id="toggler" onclick="toggle('form-wrap', 'gallery'); return false;" href="#">contact me</a>
+</footer>
+</body>
+</html>
